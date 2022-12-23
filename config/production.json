@@ -1,0 +1,6 @@
+{
+    "port": 80,
+    "jwtSecret": "client-server application",
+    "mongoUri": "mongodb+srv://production:r2Rzsn2ZQirxrMef@cluster0.vf1vd.mongodb.net/app?retryWrites=true&w=majority",
+    "baseUrl": "https://amazing-time-organizer.herokuapp.com"
+}
