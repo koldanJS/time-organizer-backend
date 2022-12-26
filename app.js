@@ -7,7 +7,9 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: ["http://3.75.0.102"],
+    origin: [
+      "http://time-organizer-alb-297851392.eu-central-1.elb.amazonaws.com",
+    ],
   })
 );
 //Т. к. body воспринимается, как стрим, этом MW позволяет его парсить в json
