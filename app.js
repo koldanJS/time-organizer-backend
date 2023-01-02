@@ -8,7 +8,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://time-organizer-alb-297851392.eu-central-1.elb.amazonaws.com",
+      "https://tests-daniel.digifi.cc/",
+      "https://api.tests-daniel.digifi.cc/",
     ],
   })
 );
