@@ -19,6 +19,7 @@ app.use(
 //Т. к. body воспринимается, как стрим, этом MW позволяет его парсить в json
 app.use(express.json({ extended: true }));
 //Подключаем обработчики роутов
+app.use("*", require("./routes/test.routes"));
 app.use("/api/auth", require("./routes/auth.routes"));
 app.use("/api/user", require("./routes/user.routes"));
 app.use("/api/project", require("./routes/project.routes"));
