@@ -7,12 +7,13 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: [
-      "http://time-organizer-alb-297851392.eu-central-1.elb.amazonaws.com",
-      "http://tests-daniel.digifi.cc",
-      "https://tests-daniel.digifi.cc",
-      "https://api.tests-daniel.digifi.cc",
-    ],
+    // origin: [
+    //   "http://time-organizer-alb-297851392.eu-central-1.elb.amazonaws.com",
+    //   "http://tests-daniel.digifi.cc",
+    //   "https://tests-daniel.digifi.cc",
+    //   "https://api.tests-daniel.digifi.cc",
+    // ],
+    origin: ["https://tests-daniel.digifi.cc"],
   })
 );
 //Т. к. body воспринимается, как стрим, этом MW позволяет его парсить в json
