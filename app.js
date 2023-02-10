@@ -8,16 +8,16 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://time-organizer-alb-297851392.eu-central-1.elb.amazonaws.com",
+      "http://time-organizer-test-lb-162765121.us-east-1.elb.amazonaws.com/",
       "http://tests-daniel.digifi.cc",
       "https://tests-daniel.digifi.cc",
-      "https://api.tests-daniel.digifi.cc",
     ],
   })
 );
 //Т. к. body воспринимается, как стрим, этом MW позволяет его парсить в json
 app.use(express.json({ extended: true }));
 //Подключаем обработчики роутов
+app.use("/api/health-check", require("./routes/healthCheck.routes"));
 app.use("/api/auth", require("./routes/auth.routes"));
 app.use("/api/user", require("./routes/user.routes"));
 app.use("/api/project", require("./routes/project.routes"));
