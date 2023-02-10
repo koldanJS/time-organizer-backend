@@ -2,15 +2,15 @@ name: Deploy-to-Amazon-ECS
 
 on:
   push:
-    branches: [ master ]
+    branches: [ custom-portals ]
 
 env:
-  AWS_REGION: eu-central-1
-  ECR_REPOSITORY: timer-backend
-  ECS_SERVICE: timer-backend
-  ECS_CLUSTER: time-organizer
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY: time-organizer-backend
+  ECS_SERVICE: backend-service
+  ECS_CLUSTER: time-organizer-test-cluster
   ECS_TASK_DEFINITION: .github/workflows/task-definition.json
-  CONTAINER_NAME: timer-backend
+  CONTAINER_NAME: backend
 
 permissions:
   id-token: write
